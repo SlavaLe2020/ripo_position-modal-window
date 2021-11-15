@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="syle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Для входа нажмите кнопку <em>Enter</em></p>
+            <button id="open">Enter</button>
+        </nav>
+    </header>
+    <div class="modal" id="modal">
+        <div class="modal-body">
+            <button class="modal-close" id="close">close</button>
+            <h3>Данные для входа:</h3>
+            <form>
+                <p>
+                    <label form="email">Email:</label>
+                    <input type="email" name="email">
+                </p>
+                <p>
+                    <label form="pass">Password</label>
+                    <input type="password" name="pass">
+                </p>
+                <p>
+                    <button type="submit">Enter</button>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var button = document.getElementById('open');
+        var close = document.getElementById('close');
+        var madal = document.getElementById('madal');
+
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            modal.style.display = 'block';
+        });
+
+        close.addEventListener('click', function(event){
+            event.preventDefault();
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
